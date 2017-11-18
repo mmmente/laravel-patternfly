@@ -2,13 +2,12 @@
 
 namespace Layerworx\Patternfly;
 
-class ServiceProvider extends \Illuminate\Support\Facades\Facade
+class Facade extends \Illuminate\Support\Facades\Facade
 {
-  /**
-   * {@inheritDoc}
-   */
-  protected static function getFacadeAccessor()
-  {
-    return null;
-  }
+    /**
+     * {@inheritdoc}
+     */
+    protected static function getFacadeAccessor()
+    {
+    }
 }
