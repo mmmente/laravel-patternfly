@@ -1,0 +1,51 @@
+{
+  "name": "layerworx/laravel-patternfly",
+  "description": "A PatternFly implementation for Laravel with helpers and view scaffolding.",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/layerworx/laravel-patternfly",
+  "support": {
+    "issues": "https://github.com/layerworx/laravel-patternfly/issues",
+    "wiki": "https://github.com/layerworx/laravel-patternfly/wiki",
+    "source": "https://github.com/layerworx/laravel-patternfly"
+  },
+  "keywords": [
+    "patternfly",
+    "laravel",
+    "templating",
+    "html",
+    "bootstrap"
+  ],
+  "authors": [
+    {
+      "name": "Steven Crothers",
+      "email": "steven.crothers@gmail.com",
+      "homepage": "http://scrothers.github.io/",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-0" : {
+      "Layerworx\\Patternfly" : "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0" : {
+      "Layerworx\\Patternfly\\Tests" : "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Layerworx\\Patternfly\\ServiceProvider"
+      ],
+      "aliases": {
+        "Patternfly": "Layerworx\\Patternfly\\Facade"
+      }
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "5.5.*"
+  }
+}
