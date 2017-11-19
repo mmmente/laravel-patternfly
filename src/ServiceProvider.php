@@ -18,6 +18,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
+        $this->app->bind('patternfly', function () {
+            return new Helpers();
+        });
     }
 
     /**
@@ -27,5 +30,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/Views', 'patternfly');
+        $this->loadTranslationsFrom(__DIR__.'/Translations', 'patternfly');
     }
 }
